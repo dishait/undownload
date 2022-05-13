@@ -1,15 +1,12 @@
-# node-lib-template
+# download
 
-开箱即用的 node 库模板
+下载
 
 <br />
 
 ## features 🦕
 
-- pnpm 的
-- vitest 测试
-- 开箱即用的
-- typescript 的
+TODO
 
 <br />
 <br />
@@ -19,47 +16,7 @@
 ### install
 
 ```shell
-pnpm i
-```
-
-### test
-
-```shell
-pnpm test
-
-// or pnpm test:watch
-```
-
-### build
-
-```shell
-pnpm build
-
-// pnpm build:watch
-```
-
-### coverage
-
-```shell
-pnpm coverage
-```
-
-### dev
-
-```shell
-pnpm dev
-```
-
-### release
-
-```shell
-pnpm release
-```
-
-### play
-
-```shell
-pnpm play
+pnpm i @markthree/download
 ```
 
 <br />
@@ -67,7 +24,7 @@ pnpm play
 
 ## License
 
-Made with [name](https://github.com/name)
+Made with [markthree](https://github.com/markthree)
 
 Published under [MIT License](./LICENSE).
 

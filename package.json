@@ -1,13 +1,16 @@
 {
-	"version": "0.0.0",
-	"name": "name",
-	"description": "description",
+	"version": "0.0.1",
+	"name": "@markthree/download",
+	"publishConfig": {
+		"access": "public"
+	},
+	"description": "下载",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/name/repo.git"
+		"url": "git+https://github.com/markthree/download.git"
 	},
 	"exports": {
 		".": {
@@ -23,7 +26,6 @@
 		"build": "tsup",
 		"test": "vitest",
 		"dev": "esno src/index.ts",
-		"play": "esno demo/index.ts",
 		"test:watch": "vitest --watch",
 		"coverage": "vitest --coverage",
 		"prepublishOnly": "npm run build",
@@ -34,16 +36,17 @@
 		"lib",
 		"tool",
 		"node",
-		"utils"
+		"utils",
+		"download"
 	],
 	"author": {
-		"name": "name",
-		"email": "xx@xx.com",
-		"url": "https://github.com/name"
+		"name": "markthree",
+		"email": "1801982702@qq.com",
+		"url": "https://github.com/markthree"
 	},
 	"bugs": {
 		"email": "xx@xx.com",
-		"url": "https://github.com/name/repo/issues"
+		"url": "https://github.com/markthree/download/issues"
 	},
 	"license": "MIT",
 	"devDependencies": {
