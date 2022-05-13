@@ -1,4 +1,5 @@
 dist
 *.log
 coverage
+Downloads
 node_modules
