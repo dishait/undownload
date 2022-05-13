@@ -28,6 +28,7 @@
 		"dev": "esno src/index.ts",
 		"test:watch": "vitest --watch",
 		"coverage": "vitest --coverage",
+		"play": "esno playground/index.ts",
 		"prepublishOnly": "npm run build",
 		"build:watch": "npm run build -- --watch src",
 		"release": "bumpp --commit --push --tag && npm publish"
@@ -57,5 +58,8 @@
 		"tsup": "^5.12.5",
 		"typescript": "^4.6.3",
 		"vitest": "^0.1.27"
+	},
+	"dependencies": {
+		"kolorist": "^1.5.1"
 	}
 }
