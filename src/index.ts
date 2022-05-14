@@ -6,22 +6,23 @@ import {
 	isHttps,
 	ensureDir,
 	getFilename,
-	checkOptions
+	normalizeOptions
 } from './shared'
 import { resolve } from 'path'
 import { lightCyan } from 'kolorist'
 
-export const download = async (options: Options) => {
-	const { url, outputDir, method = 'GET' } = options
-
-	checkOptions({
+export function download(url: string): Promise<string>
+export function download(options: Options): Promise<string>
+export async function download(options: string | Options) {
+	const {
 		url,
-		outputDir
-	})
+		method = 'GET',
+		outDir = 'downloads'
+	} = normalizeOptions(options)
 
-	const dest = resolve(outputDir, getFilename(url))
+	const dest = resolve(outDir, getFilename(url))
 
-	await ensureDir(outputDir)
+	await ensureDir(outDir)
 
 	if (existsSync(dest)) {
 		console.log(lightCyan(dest + ' is existsed'))

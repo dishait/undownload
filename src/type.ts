@@ -1,5 +1,5 @@
 export interface Options {
 	url: string
-	outputDir: string
+	outDir?: string
 	method?: 'GET' | 'POST'
 }

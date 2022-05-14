@@ -2,4 +2,5 @@ dist
 *.log
 coverage
 Downloads
+downloads
 node_modules

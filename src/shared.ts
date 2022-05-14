@@ -2,13 +2,18 @@ import { existsSync } from 'fs'
 import { mkdir } from 'fs/promises'
 import type { Options } from './type'
 
-type CheckoutOptions = Pick<Options, 'url' | 'outputDir'>
-
-export const checkOptions = (options: CheckoutOptions) => {
-	const { url, outputDir } = options
-	if (!url || !outputDir) {
-		throw new Error('url and outputDir are required')
+export const normalizeOptions = (
+	options: string | Options
+): Options => {
+	if (typeof options === 'string') {
+		return { url: options }
 	}
+
+	if (typeof options.url !== 'string') {
+		throw new Error('url of options is a required string')
+	}
+
+	return options
 }
 
 export const isHttps = (url: string) => {
