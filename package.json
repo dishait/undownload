@@ -55,11 +55,14 @@
 		"bumpp": "^7.1.1",
 		"c8": "^7.11.0",
 		"esno": "^0.14.1",
+		"pretty-bytes": "^6.0.0",
 		"tsup": "^5.12.5",
 		"typescript": "^4.6.3",
 		"vitest": "^0.1.27"
 	},
 	"dependencies": {
+		"@types/cli-progress": "^3.11.0",
+		"cli-progress": "^3.11.0",
 		"kolorist": "^1.5.1"
 	}
 }

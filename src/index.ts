@@ -19,7 +19,8 @@ export async function download(options: string | Options) {
 			generateFilename: generateFilenameFromUrl
 		})
 
-	let dest = resolve(outDir, generateFilename(url))
+	const filename = generateFilename(url)
+	let dest = resolve(outDir, filename)
 
 	await ensureDir(outDir)
 
@@ -30,7 +31,7 @@ export async function download(options: string | Options) {
 	}
 
 	// download
-	dest = await _download({ url, method, dest })
+	dest = await _download({ url, method, dest, filename })
 
 	return dest
 }
