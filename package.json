@@ -4,6 +4,9 @@
 	"publishConfig": {
 		"access": "public"
 	},
+	"bin": {
+		"download": "./bin/download.js"
+	},
 	"description": "下载",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
@@ -26,6 +29,7 @@
 		"build": "tsup",
 		"test": "vitest",
 		"dev": "esno src/index.ts",
+		"play:cli": "esno src/cli.ts",
 		"test:watch": "vitest --watch",
 		"coverage": "vitest --coverage",
 		"play": "esno playground/index.ts",
@@ -62,6 +66,7 @@
 	},
 	"dependencies": {
 		"@types/cli-progress": "^3.11.0",
+		"cac": "^6.7.12",
 		"cli-progress": "^3.11.0",
 		"kolorist": "^1.5.1",
 		"mem": "^9.0.2"

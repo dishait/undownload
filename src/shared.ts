@@ -1,4 +1,5 @@
 import mem from 'mem'
+import { URL } from 'url'
 import { existsSync } from 'fs'
 import { isString } from './type'
 import { mkdir } from 'fs/promises'

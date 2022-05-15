@@ -5,6 +5,7 @@ specifiers:
   '@types/node': ^17.0.24
   bumpp: ^7.1.1
   c8: ^7.11.0
+  cac: ^6.7.12
   cli-progress: ^3.11.0
   esno: ^0.14.1
   kolorist: ^1.5.1
@@ -16,6 +17,7 @@ specifiers:
 
 dependencies:
   '@types/cli-progress': 3.11.0
+  cac: 6.7.12
   cli-progress: 3.11.0
   kolorist: 1.5.1
   mem: 9.0.2
@@ -206,7 +208,6 @@ packages:
   /cac/6.7.12:
     resolution: {integrity: sha512-rM7E2ygtMkJqD9c7WnFU6fruFcN3xe4FM5yUmgxhZzIKJk4uHl9U/fhwdajGFQbQuv43FAUo1Fe8gX/oIKDeSA==}
     engines: {node: '>=8'}
-    dev: true
 
   /call-me-maybe/1.0.1:
     resolution: {integrity: sha1-JtII6onje1y95gJQoV8DHBak1ms=}
