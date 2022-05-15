@@ -63,6 +63,7 @@
 	"dependencies": {
 		"@types/cli-progress": "^3.11.0",
 		"cli-progress": "^3.11.0",
-		"kolorist": "^1.5.1"
+		"kolorist": "^1.5.1",
+		"mem": "^9.0.2"
 	}
 }

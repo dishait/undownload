@@ -1,7 +1,9 @@
+import mem from 'mem'
 import { existsSync } from 'fs'
 import { isString } from './type'
 import { mkdir } from 'fs/promises'
 import type { Options } from './type'
+import prettyBytes from 'pretty-bytes'
 
 export const normalizeOptions = (
 	options: string | Options,
@@ -14,11 +16,13 @@ export const normalizeOptions = (
 }
 
 export const isHttpsProtocol = (url: string) => {
-	return new URL(url).protocol === 'https:'
+	return cachedGenerateURL(url).protocol === 'https:'
 }
 
 export const generateFilenameFromUrl = (url: string) => {
-	const filename = new URL(url).pathname.split('/').pop()
+	const filename = cachedGenerateURL(url)
+		.pathname.split('/')
+		.pop()
 	if (isString(filename)) {
 		return filename
 	}
@@ -30,3 +34,9 @@ export const ensureDir = async (dir: string) => {
 		await mkdir(dir, { recursive: true })
 	}
 }
+
+export const cachedPrettyBytes = mem(prettyBytes)
+
+export const cachedGenerateURL = mem((url: string) => {
+	return new URL(url)
+})

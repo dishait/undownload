@@ -1,11 +1,13 @@
-import prettyBytes from 'pretty-bytes'
 import { bgLightBlue } from 'kolorist'
 import { createWriteStream } from 'fs'
 import { SingleBar } from 'cli-progress'
-import { isHttpsProtocol } from './shared'
 import type { IncomingMessage } from 'http'
 import { request as httpRequest } from 'http'
 import { request as httpsRequest } from 'https'
+import {
+	isHttpsProtocol,
+	cachedPrettyBytes
+} from './shared'
 
 interface Options {
 	url: string
@@ -57,7 +59,7 @@ export function useProgressBar(
 		format,
 		formatValue(value, _, type) {
 			if (type === 'total' || type === 'value') {
-				return prettyBytes(value)
+				return cachedPrettyBytes(value)
 			}
 			return String(value)
 		},

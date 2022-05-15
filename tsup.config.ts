@@ -8,5 +8,5 @@ export default defineConfig({
 	outDir: 'dist',
 	format: ['cjs', 'esm'],
 	entry: ['src/index.ts'],
-	noExternal: ['pretty-bytes']
+	noExternal: ['pretty-bytes', 'mem']
 })
