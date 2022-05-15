@@ -1,5 +1,5 @@
 {
-	"version": "0.0.1",
+	"version": "0.2.0",
 	"name": "@markthree/download",
 	"publishConfig": {
 		"access": "public"
@@ -7,7 +7,7 @@
 	"bin": {
 		"download": "./bin/download.js"
 	},
-	"description": "下载",
+	"description": "all in one 的 node 下载",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
