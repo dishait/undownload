@@ -12,12 +12,18 @@ import {
 export function download(url: string): Promise<string>
 export function download(options: Options): Promise<string>
 export async function download(options: string | Options) {
-	const { url, method, outDir, generateFilename } =
-		normalizeOptions(options, {
-			method: 'GET',
-			outDir: 'downloads',
-			generateFilename: generateFilenameFromUrl
-		})
+	const {
+		url,
+		method,
+		outDir,
+		showProgressBar,
+		generateFilename
+	} = normalizeOptions(options, {
+		method: 'GET',
+		showProgressBar: true,
+		outDir: 'downloads',
+		generateFilename: generateFilenameFromUrl
+	})
 
 	const filename = generateFilename(url)
 	let dest = resolve(outDir, filename)
@@ -31,7 +37,13 @@ export async function download(options: string | Options) {
 	}
 
 	// download
-	dest = await _download({ url, method, dest, filename })
+	dest = await _download({
+		url,
+		dest,
+		method,
+		filename,
+		showProgressBar
+	})
 
 	return dest
 }

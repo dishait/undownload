@@ -12,10 +12,12 @@ interface Options {
 	dest: string
 	method: string
 	filename: string
+	showProgressBar: boolean
 }
 
 export function download(options: Options) {
-	const { url, dest, method, filename } = options
+	const { url, dest, method, filename, showProgressBar } =
+		options
 
 	// get request method according to protocol
 	const request = isHttpsProtocol(url)
@@ -29,7 +31,9 @@ export function download(options: Options) {
 			method: method.toUpperCase()
 		})
 		client.once('response', response => {
-			useProcessBar(filename, response)
+			if (showProgressBar) {
+				useProgressBar(filename, response)
+			}
 			response.pipe(file)
 			file.once('finish', () => resolve(dest))
 			file.once('error', reject)
@@ -40,7 +44,7 @@ export function download(options: Options) {
 	})
 }
 
-export function useProcessBar(
+export function useProgressBar(
 	name: string,
 	response: IncomingMessage
 ) {

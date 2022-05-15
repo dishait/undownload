@@ -12,6 +12,10 @@ export interface Options {
 	 * @default will be automatically generated from 'pathname' in 'url'
 	 */
 	generateFilename?: (url: string) => string
+	/**
+	 * @default true
+	 */
+	showProgressBar?: boolean
 }
 
 export const isString = (v: unknown): v is string => {
