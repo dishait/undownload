@@ -1,4 +1,4 @@
-# download
+# undownload
 
 `all in one` 的 `node` 下载
 
@@ -20,7 +20,7 @@
 #### install
 
 ```shell
-npm i easy-download
+npm i undownload
 ```
 
 <br />
@@ -30,7 +30,7 @@ npm i easy-download
 基础
 
 ```ts
-import { download } from 'easy-download'
+import { download } from 'undownload'
 
 // 将输出到工作区的 downloads 目录下
 download('https://...')
@@ -43,7 +43,7 @@ download('https://...')
 改变输出目录，默认为 `downloads`
 
 ```ts
-import { download } from 'easy-download'
+import { download } from 'undownload'
 
 // 将输出到工作区的 downloads/imgs 目录下
 download({
@@ -59,7 +59,7 @@ download({
 隐藏进度条
 
 ```ts
-import { download } from 'easy-download'
+import { download } from 'undownload'
 
 download({
 	url: 'https://...',
@@ -74,7 +74,7 @@ download({
 返回结果 `Promise<string>` 输出路径 `dest`
 
 ```ts
-import { download } from 'easy-download'
+import { download } from 'undownload'
 
 const runDownload = async () => {
     const dest = await download('https://...')
@@ -92,7 +92,7 @@ runDownload()
 #### install
 
 ```shell
-npm i easy-download -g
+npm i undownload -g
 ```
 
 <br />

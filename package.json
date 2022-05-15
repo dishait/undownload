@@ -1,9 +1,6 @@
 {
 	"version": "1.0.0",
-	"name": "easy-download",
-	"publishConfig": {
-		"access": "public"
-	},
+	"name": "undownload",
 	"bin": {
 		"download": "./bin/download.js"
 	},
@@ -13,7 +10,7 @@
 	"types": "./dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/markthree/easy-download.git"
+		"url": "git+https://github.com/markthree/undownload.git"
 	},
 	"exports": {
 		".": {
@@ -52,7 +49,7 @@
 	},
 	"bugs": {
 		"email": "1801982702@qq.com",
-		"url": "https://github.com/markthree/easy-download/issues"
+		"url": "https://github.com/markthree/undownload/issues"
 	},
 	"license": "MIT",
 	"devDependencies": {
